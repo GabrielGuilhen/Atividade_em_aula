@@ -1,0 +1,26 @@
+programa
+{
+	
+	funcao inicio()
+	{
+	     inteiro PA = 80000
+	     inteiro PB = 200000
+
+	     real taxaA = 0.03
+	     real taxaB = 0.015
+
+	     inteiro anos	 
+
+		para(inteiro anos = 0; PB >= PA; anos++){																
+		
+		PA=PA + (PA*taxaA)
+		PB=PB + (PB*taxaB)
+	     
+		}
+	     escreva("Em ", anos, " anos o pais A irá superar o pais B")
+		
+		
+		
+	}
+	
+}
