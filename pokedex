@@ -1,0 +1,16 @@
+<?php
+
+  $nome = readline("Qual o seu pokemon?");
+
+  $dados_em_texto = file_get_contents("https://www.pokemon.com/br/pokedex/$nome");
+
+  $pokemons = json_decode($dados_em_texto, true);
+
+  print(tigrinho($pokemons['name'] ). "\n");
+  print("altura:" . $pokemons ['height'] . "\n");
+  print("peso:" . $pokemons ['weight'] . "\n");
+  print("movimentos: \n" );
+
+     foreach ($pokemon['moves'] as $move){
+        print (" - " . $move['move']['name'] . "\n");
+     }
